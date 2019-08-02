@@ -22,7 +22,6 @@ function submitData(name, email)
   .then(data => {
     let id = data.id
     document.body.innerHTML = id;
-
     console.log("fetch", document.body.innerHTML);
   })
   .catch(error => {
