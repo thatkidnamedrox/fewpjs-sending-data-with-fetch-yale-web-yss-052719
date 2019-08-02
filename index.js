@@ -26,10 +26,6 @@ function submitData(name, email)
     console.log("fetch", document.body.innerHTML);
   })
   .catch(error => {
-    // let p = document.createElement("p");
-    // p.textContent = data.id;
-    // document.body.appendChild(p);
-    // console.log(error.message);
     document.body.innerHTML = error.message;
   })
 }
