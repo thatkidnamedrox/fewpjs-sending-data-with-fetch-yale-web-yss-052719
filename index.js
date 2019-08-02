@@ -17,7 +17,7 @@ function submitData(name, email)
     body: JSON.stringify(formData)
   }
 
-  fetch(url, configObj)
+  return fetch(url, configObj)
   .then(res => res.json())
   .then(data => {
     let id = data.id
