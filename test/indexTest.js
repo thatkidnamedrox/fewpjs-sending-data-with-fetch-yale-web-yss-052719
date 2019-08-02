@@ -19,7 +19,7 @@ describe( "submitData()", () => {
 
   } );
 
-  it( "makes a POST request to /user with a name and email", async () => {
+  it( "makes a POST request to /user with a name and email", async function () {
     let reqBody
     let headers
     nock( 'http://localhost:3000' )
@@ -35,8 +35,10 @@ describe( "submitData()", () => {
 
     let name = "Steve"
     let email = "steve@steve.com"
+    // console.log(rando);
 
     await submitData( name, email )
+
     expect( window.fetch, "A fetch to the API was not found" )
       .to.have.been.called.with( 'http://localhost:3000/users' );
     expect( window.fetch )
@@ -65,9 +67,9 @@ describe( "submitData()", () => {
 
     let name = "Sam"
     let email = "sam@sam.com"
+    //console.log(rando);
 
     await submitData( name, email )
-
     expect( document.body.innerHTML )
       .to.include( rando )
   } );
